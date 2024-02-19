@@ -10,6 +10,14 @@ def app_operation(start_pack):
     for i in top_n:
         print(f'\n{i}')
 
+    filter_words = input("Введите ключевые слова для фильтрации вакансий через пробел: ").split(' ')
+    filter_list = start_pack.get_filter_words(filter_words, list_vacancy)
+    for i_ in filter_list:
+        print(f'\n{i_}')
+
+
+
+
 
 
 

@@ -8,7 +8,8 @@ class Vacancy:
     def __str__(self):
         return (f'Имя: {self.name_vacancy}\n'
                 f'Зарплата: {self.salary_vacancy}\n'
-                f'Ссылка: {self.link_vacancy}')
+                f'Ссылка: {self.link_vacancy}\n'
+                f'Описание: {self.description}\n')
 
     @property
     def salary_vacancy(self):
