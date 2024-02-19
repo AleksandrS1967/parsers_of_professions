@@ -19,3 +19,17 @@ class Vacancy:
             salary = self.__vacancy['salary']['to']
             return salary
 
+    @property
+    def description(self):
+        if self.__vacancy['snippet']['requirement']:
+            res = self.__vacancy['snippet']['requirement']
+        else:
+            res = ''
+        if self.__vacancy['snippet']['responsibility']:
+            res_ = self.__vacancy['snippet']['responsibility']
+        else:
+            res_ = ''
+        return res + '\n' + res_
+
+
+
