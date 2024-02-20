@@ -1,6 +1,7 @@
 
 
 def app_operation(start_pack):
+    """основная функция выполняющая программу"""
     while True:
         search_query = input("Введите название вакансии для поиска: ")
         vacancy = start_pack.api_hh.get_vacancy(search_query, start_pack.link_hh)
@@ -24,7 +25,7 @@ def app_operation(start_pack):
                 print(f'\n{i_}')
 
             start_pack.data_json.delete_data(start_pack.vacancy_path)
-            res = input('\nесли хотите выйти - не чего не вводите. Чтоб начать заново введите - 1\n')
+            res = input('\nесли хотите выйти - не чего не вводите. Чтоб начать заново введите что ни будь\n')
             if res == '':
                 break
         else:

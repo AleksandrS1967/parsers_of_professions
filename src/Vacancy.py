@@ -2,7 +2,7 @@ from heapq import nlargest
 
 
 class Vacancy:
-    """"""
+    """Класс для работы с вакансиями"""
     def __init__(self, vacancy: dict = None):
         try:
             self.__vacancy = vacancy
@@ -21,6 +21,7 @@ class Vacancy:
 
     @staticmethod
     def get_top_n(query_top_n, start_pack):
+        """Получаем top_n и создаём список экземпляров каждой вакансии"""
         vacancy = start_pack.data_json.get_data(start_pack.vacancy_path)
         list_vacancy = []
         for i in vacancy:
@@ -31,6 +32,7 @@ class Vacancy:
 
     @staticmethod
     def get_filter_words(filter_words: list, list_vacancy: list):
+        """Фильтрует вакансии по описанию используя ключевые слова введенные пользователем"""
         filter_list = []
         for i in list_vacancy:
             for i_ in filter_words:
